@@ -5,6 +5,7 @@ npm install nodemon --save-dev
 npm install uuid --save
 npm install express-validator --save
 npm install axios --save
+npm install mongoose-unique-validator --save
 
 npm install mongoose --save
 
@@ -109,3 +110,45 @@ http://localhost:5000/api/places/5fd6cfb12f6a9234c0ca5551
 
 DELETE
 http://localhost:5000/api/places/5fd6cfb12f6a9234c0ca5551
+
+
+
+USERS --- add user & check user---
+
+POST - create a new users
+http://localhost:5000/api/users/signup
+
+{
+  "name": "John",
+  "email": "test2@test.com",
+  "password": "test0001",
+  "places": "p1"
+}
+
+result
+
+{
+    "user": {
+        "_id": "5fd7aee5aa9878137479ced5",
+        "name": "John",
+        "email": "test2@test.com",
+        "image": "https://live.staticflickr.com/7631/26849088292_36fc52ee90_b.jpg",
+        "password": "test0001",
+        "places": "p1",
+        "__v": 0,
+        "id": "5fd7aee5aa9878137479ced5"
+    }
+}
+
+POST - test to see if logged in
+
+http://localhost:5000/api/users/login
+
+{
+  "email": "test2@test.com",
+  "password": "test0001"
+}
+
+GET - get all users
+
+http://localhost:5000/api/users/
