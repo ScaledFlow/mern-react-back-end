@@ -91,3 +91,21 @@ http://localhost:5000/api/places
     "creator": "u2",
     "address": "11 Wall St, New York, NY 10005"
 }
+
+AFTER CONNECTION TO MONGO
+
+GET
+http://localhost:5000/api/places/5fd6cfb12f6a9234c0ca5551
+
+http://localhost:5000/api/places/user/u2
+
+PATCH
+http://localhost:5000/api/places/5fd6cfb12f6a9234c0ca5551
+
+{
+    "title": "Test title change",
+    "description": "Test description change"
+}
+
+DELETE
+http://localhost:5000/api/places/5fd6cfb12f6a9234c0ca5551

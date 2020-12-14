@@ -30,6 +30,7 @@ mongoose
  .connect('mongodb+srv://admin:oxddFgqA0BT3w2f7@cluster0.76p3z.mongodb.net/productDB?retryWrites=true&w=majority')
  .then(() => {
   app.listen(5000);
+  console.log("server started");
  })
  .catch((err => {
    console.log(err);
