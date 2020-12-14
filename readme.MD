@@ -152,3 +152,60 @@ http://localhost:5000/api/users/login
 GET - get all users
 
 http://localhost:5000/api/users/
+
+
+POST - create a new users - no dummy id
+http://localhost:5000/api/users/signup
+
+{
+  "name": "John",
+  "email": "test2@test.com",
+  "password": "test0001"
+}
+
+result
+
+{
+    "user": {
+        "places": [],
+        "_id": "5fd7da50d868ef0f04bffc35",
+        "name": "John",
+        "email": "test2@test.com",
+        "image": "https://live.staticflickr.com/7631/26849088292_36fc52ee90_b.jpg",
+        "password": "test0001",
+        "__v": 0,
+        "id": "5fd7da50d868ef0f04bffc35"
+    }
+}
+
+POST
+http://localhost:5000/api/places
+
+{
+    "title": "New York Stock Exchange",
+    "description": "Where the money lives",
+    "creator": "5fd7da50d868ef0f04bffc35",
+    "address": "11 Wall St, New York, NY 10005"
+}
+
+result
+
+{
+    "place": {
+        "_id": "5fd7dbd960506d07c04e6067",
+        "title": "New York Stock Exchange",
+        "description": "Where the money lives",
+        "address": "11 Wall St, New York, NY 10005",
+        "location": {
+            "lat": 40.7068661,
+            "lng": -74.01131889999999
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Empire_State_Building_%28aerial_view%29.jpg/400px-Empire_State_Building_%28aerial_view%29.jpg",
+        "creator": "5fd7da50d868ef0f04bffc35",
+        "__v": 0
+    }
+}
+
+DELETE
+http://localhost:5000/api/places/5fd7dbd960506d07c04e6067
+
