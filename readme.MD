@@ -6,6 +6,7 @@ npm install uuid --save
 npm install express-validator --save
 npm install axios --save
 npm install mongoose-unique-validator --save
+npm install multer --save
 
 npm install mongoose --save
 
@@ -184,7 +185,7 @@ http://localhost:5000/api/places
 {
     "title": "New York Stock Exchange",
     "description": "Where the money lives",
-    "creator": "5fd7da50d868ef0f04bffc35",
+    "creator": "5fd91d1757c8872190eb154c",
     "address": "11 Wall St, New York, NY 10005"
 }
 
@@ -209,3 +210,32 @@ result
 DELETE
 http://localhost:5000/api/places/5fd7dbd960506d07c04e6067
 
+
+MONGOOSE - app.js
+
+mongoose
+ .connect('mongodb+srv://admin:oxddFgqA0BT3w2f7@cluster0.76p3z.mongodb.net/mernDB?retryWrites=true&w=majority')
+ .then(() => {
+  app.listen(5000);
+  console.log("server started");
+ })
+ .catch((err => {
+   console.log(err);
+ }));
+
+
+GOOGLE API - location.js
+
+const API_KEY = 'AIzaSyDWF4wuSbv098pUwfroeP_VxG7EkDmsmOA';
+
+async function getCoordsForAddress(address) {
+  // return {
+  //   lat: 40.7484474,
+  //   lng: -73.9871516
+  // };
+  console.log(address);
+  const response = await axios.get(
+    `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
+      address
+    )}&key=${API_KEY}`
+  );
