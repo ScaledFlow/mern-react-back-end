@@ -160,7 +160,7 @@ http://localhost:5000/api/users/signup
 
 {
   "name": "John",
-  "email": "test2@test.com",
+  "email": "test@test.com",
   "password": "test0001"
 }
 
@@ -169,7 +169,7 @@ result
 {
     "user": {
         "places": [],
-        "_id": "5fd7da50d868ef0f04bffc35",
+        "_id": "5fdbd6465bc1273f00499989",
         "name": "John",
         "email": "test2@test.com",
         "image": "https://live.staticflickr.com/7631/26849088292_36fc52ee90_b.jpg",
@@ -185,7 +185,7 @@ http://localhost:5000/api/places
 {
     "title": "New York Stock Exchange",
     "description": "Where the money lives",
-    "creator": "5fd91d1757c8872190eb154c",
+    "creator": "5fdbd6465bc1273f00499989",
     "address": "11 Wall St, New York, NY 10005"
 }
 
@@ -193,7 +193,7 @@ result
 
 {
     "place": {
-        "_id": "5fd7dbd960506d07c04e6067",
+        "_id": "5fdbd6465bc1273f00499989",
         "title": "New York Stock Exchange",
         "description": "Where the money lives",
         "address": "11 Wall St, New York, NY 10005",
